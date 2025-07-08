@@ -1,9 +1,8 @@
-import { useRef, useState } from 'react'
-import TodoWriteForm from './components/TodoWriteForm'
-import TodoList from './components/TodoList'
+import { useState, useRef } from 'react'
 
-function App() {
+export function useTodos() {
     const lastId = useRef(4)
+
     const [todos, setTodos] = useState([
         { id: 4, text: '필수 기능 구현', checkd: false },
         { id: 3, text: 'local storage로 저장', checkd: false },
@@ -27,12 +26,5 @@ function App() {
         setTodos(updateTodos)
     }
 
-    return (
-        <>
-            <TodoWriteForm addTodo={addTodo} />
-            <TodoList todos={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} />
-        </>
-    )
+    return { todos, addTodo, removeTodo, toggleTodo }
 }
-
-export default App
