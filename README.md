@@ -42,6 +42,7 @@ src/
 ```
 
 ### 🧠 스크린샷
+
 <img width="900" alt="image1" src="https://github.com/user-attachments/assets/1a1fb12f-c16b-4ee4-8cf6-3f761001033c" />
 <img width="900" alt="image2" src="https://github.com/user-attachments/assets/090975ef-755c-491e-b9aa-83cfc3c4b8e4" />
 
@@ -56,7 +57,6 @@ setStorage('todos', todos);
 }, [todos]);
 ```
 
-
 ## 📦 설치 및 실행
 
 ```bash
@@ -64,5 +64,3 @@ npm create vite@latest
 npm install
 npm run dev
 ```
-
-
