@@ -42,6 +42,8 @@ src/
 ```
 
 ### 🧠 스크린샷
+<img width="900" alt="image1" src="https://github.com/user-attachments/assets/1a1fb12f-c16b-4ee4-8cf6-3f761001033c" />
+<img width="900" alt="image2" src="https://github.com/user-attachments/assets/090975ef-755c-491e-b9aa-83cfc3c4b8e4" />
 
 ### 💾 localStorage 연동 방식
 
@@ -54,12 +56,6 @@ setStorage('todos', todos);
 }, [todos]);
 ```
 
-## TailwindCSS를 이용한 스타일 요소 구현
-
--   기본 구조만 구현되면 디자인은 자유롭게 꾸며도 됩니다.
--   CDN 방식으로 테일윈드를 적용하셔도 됩니다.
-
----
 
 ## 📦 설치 및 실행
 
@@ -69,16 +65,4 @@ npm install
 npm run dev
 ```
 
----
 
-## ✅ 과제 제출 방법
-
--   [미션 레포지토리](https://github.com/sik2/react-todo-mession1)에서 저장소 fork 후 GitHub에 완성된 프로젝트 PR 보내기
--   정상 작동 확인 필수 (`npm run dev` 기준)
--   README에 간단한 기능 소개 및 스크린샷 포함 권장
-
----
-
-필요 시 TypeScript 버전으로 확장하거나, 우선순위 기능, 날짜 필터, 편집 기능 등을 추가 구현해도 좋습니다.
-
-**기능 구현이 핵심이며, 깔끔하고 읽기 쉬운 코드 구성**을 목표로 해주세요.
