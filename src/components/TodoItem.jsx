@@ -10,8 +10,9 @@ function TodoItem({ todo }) {
                     toggleTodo(todo.id)
                 }}
                 checked={todo.checked}
+                className="mr-3 w-5 h-5 accent-indigo-500 cursor-pointer" // accent로 색상 지정
             />
-            {JSON.stringify(todo.checked)} / {todo.id} / {todo.text || ''}
+            {todo.text || ''}
             <button onClick={() => removeTodo(todo.id)}>X</button>
         </li>
     )

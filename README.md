@@ -41,16 +41,7 @@ src/
    └─ storage.js       ← getStorage, setStorage
 ```
 
-### 🧠 추천 함수 및 훅 설계
-
-| 함수 / 훅명           | 설명                                            |
-| --------------------- | ----------------------------------------------- |
-| useTodos()            | todo 상태 관리 및 추가/삭제 로직 포함 커스텀 훅 |
-| createTodo(value)     | 새로운 todo 객체 생성 ({ id, value })           |
-| addTodo(value)        | 리스트에 todo 추가                              |
-| removeTodo(id)        | 특정 id를 가진 todo 삭제                        |
-| getStorage(key)       | localStorage에서 데이터 불러오기                |
-| setStorage(key, data) | localStorage에 데이터 저장                      |
+### 🧠 스크린샷
 
 ### 💾 localStorage 연동 방식
 
