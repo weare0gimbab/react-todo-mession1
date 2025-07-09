@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { getItem, setItem } from '../utils/storage' //local storage
 
 export function useTodos() {
-    //getItem으로 가져옴 id 중복문제로 초기값 삭제
+    //getItem으로 가져옴 초기값 삭제
     const [todos, setTodos] = useState(() => getItem('todos', []))
 
     // local storage에 저장
