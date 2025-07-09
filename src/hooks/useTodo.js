@@ -1,28 +1,27 @@
-import { useState, useRef } from 'react'
+import { useState, useEffect } from 'react'
+import { getItem, setItem } from '../utils/storage' //local storage
 
 export function useTodos() {
-    const lastId = useRef(4)
+    //getItem으로 가져옴 id 중복문제로 초기값 삭제
+    const [todos, setTodos] = useState(() => getItem('todos', []))
 
-    const [todos, setTodos] = useState([
-        { id: 4, text: '필수 기능 구현', checkd: false },
-        { id: 3, text: 'local storage로 저장', checkd: false },
-        { id: 2, text: '커스텀 훅', checkd: false },
-        { id: 1, text: 'tailwind 적용', checkd: false },
-    ])
+    // local storage에 저장
+    useEffect(() => {
+        setItem('todos', todos)
+    }, [todos])
 
     const addTodo = (text) => {
-        const todo = { id: lastId.current, text, checked: false }
+        const todo = { id: Date.now(), text, checked: false }
         setTodos([todo, ...todos])
-        lastId.current++
     }
 
-    const removeTodo = (seletedId) => {
-        const filterTodos = todos.filter((todo) => todo.id != seletedId)
+    const removeTodo = (selectedId) => {
+        const filterTodos = todos.filter((todo) => todo.id !== selectedId)
         setTodos(filterTodos)
     }
 
-    const toggleTodo = (seletedId) => {
-        const updateTodos = todos.map((todo) => (todo.id == seletedId ? { ...todo, checked: !todo.checked } : todo))
+    const toggleTodo = (selectedId) => {
+        const updateTodos = todos.map((todo) => (todo.id === selectedId ? { ...todo, checked: !todo.checked } : todo)) // === 사용
         setTodos(updateTodos)
     }
 
