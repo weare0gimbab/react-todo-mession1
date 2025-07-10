@@ -3,7 +3,7 @@ const TodoContext = createContext()
 import { getItem, setItem } from '../utils/storage'
 
 export function TodoProvider({ children }) {
-    const lastId = useRef(1)
+    const lastId = useRef(0)
 
     const [todos, setTodos] = useState(() => getItem('todos', []))
 
@@ -13,7 +13,7 @@ export function TodoProvider({ children }) {
 
     const addTodo = (text) => {
         const newTodo = {
-            id: lastId.current,
+            id: ++lastId.current,
             text,
             checked: false,
         }
