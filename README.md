@@ -1,4 +1,4 @@
-# 리액트 투두 앱 만들기 미션 레포
+# 리액트 투두 앱 만들기 미션
 
 ## 🎯 프로젝트 개요
 
@@ -46,6 +46,11 @@ src/
 <img width="900" alt="image1" src="https://github.com/user-attachments/assets/1a1fb12f-c16b-4ee4-8cf6-3f761001033c" />
 <img width="900" alt="image2" src="https://github.com/user-attachments/assets/090975ef-755c-491e-b9aa-83cfc3c4b8e4" />
 
+### 🎨 TailwindCSS를 이용한 스타일 요소 구현
+
+cdn방식
+
+
 ### 💾 localStorage 연동 방식
 
 useEffect()를 사용해 앱 최초 로딩 시 localStorage에서 todos 불러오기
@@ -57,10 +62,3 @@ setStorage('todos', todos);
 }, [todos]);
 ```
 
-## 📦 설치 및 실행
-
-```bash
-npm create vite@latest
-npm install
-npm run dev
-```
